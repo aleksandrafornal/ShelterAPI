@@ -39,9 +39,9 @@ SUCCESS
 ```
 ERROR
 ```
-400 Bad Request
+400 Bad Request (Validation went wrong, bad data)
 {
-    "validatorList": [?]
+    "validatorList": [ValidatorError]
 }
 ```
 
@@ -69,9 +69,9 @@ SUCCESS
 ```
 ERROR
 ```
-400 Bad Request
+400 Bad Request (Validation went wrong, bad data)
 {
-"validatorList": [?]
+    "validatorList": [ValidationError]
 }
 ```
 
@@ -94,7 +94,7 @@ SUCCESS
 ```
 ERROR
 ```
-404 Not Found
+404 Not Found (Adopter not found)
 ```
 
 GET /adopters
@@ -142,7 +142,7 @@ SUCCESS
 ```
 ERROR
 ```
-404 Not Found
+404 Not Found (Adopter or pet not found)
 ```
 
 GET /pets/{id}
@@ -165,7 +165,7 @@ SUCCESS
 ```
 ERROR
 ```
-404 Not Found
+404 Not Found (Pet not found)
 ```
 
 GET /pets
@@ -221,7 +221,7 @@ SUCCESS
 ```
 ERROR
 ```
-404 Not Found
+404 Not Found (Adoption data not found)
 ```
 
 GET /adoption-data
@@ -249,5 +249,5 @@ SUCCESS
 ```
 ERROR
 ```
-404 Not Found
+404 Not Found (Adopter not found)
 ```
